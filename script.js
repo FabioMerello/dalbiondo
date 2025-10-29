@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ====== FILTRI PRODOTTI (sezione categoria) ======
+    // ====== FILTRI PRODOTTI (sezione categoria principale) ======
     const productsGrid = document.getElementById('products-grid');
     if (productsGrid) {
         const searchInput = document.getElementById('search-input');
@@ -171,9 +171,108 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateList();
     }
+
+    // ====== SEZIONE SIGARI (catalogo-grid e preventivi) ======
+    const searchInput = document.getElementById("search");
+    const brandFilter = document.getElementById("brand-filter");
+    const priceFilter = document.getElementById("price-filter");
+    const cards = document.querySelectorAll(".catalogo-card");
+
+    if (searchInput && brandFilter && priceFilter && cards.length > 0) {
+        function filterProducts() {
+            const search = searchInput.value.toLowerCase();
+            const brand = brandFilter.value;
+            const price = priceFilter.value;
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const matchesSearch = card.querySelector("h3").textContent.toLowerCase().includes(search);
+                const matchesBrand = !brand || card.dataset.brand === brand;
+                const matchesPrice = !price || card.dataset.price === price;
+
+                if (matchesSearch && matchesBrand && matchesPrice) {
+                    card.style.display = "flex";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            const grid = document.querySelector(".catalogo-grid");
+            if (!grid) return;
+            if (visibleCount === 1) {
+                grid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 350px))";
+                grid.style.justifyContent = "center";
+            } else {
+                grid.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
+                grid.style.justifyContent = "initial";
+            }
+        }
+
+        searchInput.addEventListener("input", filterProducts);
+        brandFilter.addEventListener("change", filterProducts);
+        priceFilter.addEventListener("change", filterProducts);
+    }
+
+    // ====== GESTIONE FORM SIGARI (preventivi Web3Forms) ======
+    document.querySelectorAll('.product-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.product-card');
+            const wrapper = card.querySelector('.product-form-wrapper');
+
+            // Chiude eventuali altri form aperti
+            document.querySelectorAll('.product-form-wrapper.active').forEach(w => {
+                if (w !== wrapper) {
+                    w.classList.remove('active');
+                    w.closest('.product-card').querySelector('.product-btn').textContent = 'Richiedi preventivo';
+                }
+            });
+
+            // Attiva/disattiva solo il form cliccato
+            const isActive = wrapper.classList.toggle('active');
+            btn.textContent = isActive ? 'Chiudi preventivo' : 'Richiedi preventivo';
+        });
+    });
+
+    // Calcolo dinamico del totale
+    document.querySelectorAll('.product-form').forEach(form => {
+        const prezzo = parseFloat(form.closest('.product-card').dataset.prezzo);
+        const prodotto = form.closest('.product-card').dataset.nome;
+        const inputQ = form.querySelector('.product-quantity');
+        const spanTot = form.querySelector('.product-total span');
+        const hiddenName = form.querySelector('input[name="product_name"]');
+
+        hiddenName.value = prodotto;
+
+        function aggiornaTotale() {
+            const q = parseInt(inputQ.value) || 1;
+            spanTot.textContent = (prezzo * q).toFixed(2);
+        }
+
+        inputQ.addEventListener('input', aggiornaTotale);
+        aggiornaTotale();
+    });
+
+    // Invio Web3Forms
+    document.querySelectorAll('.product-form').forEach(form => {
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            const data = new FormData(form);
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data
+            });
+            if (response.ok) {
+                alert('✅ Grazie! La tua richiesta è stata inviata.');
+                form.reset();
+            } else {
+                alert('❌ Si è verificato un errore. Riprova.');
+            }
+        });
+    });
 });
 
-// FAQ toggle
+// ====== FAQ toggle ======
 document.querySelectorAll(".faq-question").forEach(btn => {
     btn.addEventListener("click", () => {
         const answer = btn.nextElementSibling;
@@ -188,7 +287,7 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     });
 });
 
-// Counter animati
+// ====== Counter animati ======
 const counters = document.querySelectorAll('.counter');
 let countersStarted = false;
 
