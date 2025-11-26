@@ -1,10 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dal Biondo - Rum</title>
+    <link rel="icon" href="https://dalbiondo1977.it/wp-content/uploads/2022/09/logo-dal-biondo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+    </style>
 </head>
 <body>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+    <img src="https://dalbiondo1977.it/wp-content/uploads/2022/09/logo-dal-biondo.png" alt="Dal Biondo logo" class="logo">
+    <div class="menu-toggle" id="menu-toggle" aria-label="Apri menu">&#9776;</div>
+    <nav class="nav-links" id="nav">
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#about">Chi siamo</a>
+        <a href="index.html#catalogo">Catalogo</a>
+        <a href="index.html#eventi">Eventi</a>
+        <a href="index.html#gallery">Galleria</a>
+        <a href="index.html#contact">Contatti</a>
+    </nav>
+</header>
+
+<!-- Hero piccolo -->
+<section class="hero-small" style="background: url('https://myspirits.it/blog/wp-content/uploads/2021/06/Storia-del-rum-1024x684.jpg') center/cover no-repeat;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+        <h1>La Nostra Carta</h1>
+        <p>Una selezione curata di vini e specialità della casa</p>
+    </div>
+</section>
+
+<!-- SEZIONE MENU - STILE CARTA ELEGANTE (VERSIONE ENOTECA) -->
+<section class="menu-carta" data-aos="fade-up">
+
+    <style>
+        .menu-carta {
+            max-width: 900px;
+            margin: 4rem auto;
+            background: #faf7f2;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.08);
+            border: 1px solid #e6dfd5;
+            font-family: "Montserrat", serif;
+        }
+
+        .menu-carta h2 {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #3a2c24;
+        }
+
+        .menu-divider {
+            width: 120px;
+            height: 2px;
+            background: #c8b08a;
+            margin: 0 auto 2.5rem;
+        }
+
+        .menu-section {
+            margin-bottom: 2.8rem;
+        }
+
+        .menu-section h3 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
+            color: #7a5e49;
+            border-bottom: 1px solid #d6c7b9;
+            padding-bottom: 0.4rem;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            border-bottom: 1px dotted #c9b9a9;
+            font-size: 1rem;
+        }
+
+        .menu-item-name {
+            font-weight: 600;
+            color: #3d2e25;
+        }
+
+        .menu-item-desc {
+            font-size: 0.9rem;
+            color: #6b574a;
+            margin-top: 2px;
+        }
+
+        .menu-item-price {
+            font-weight: 600;
+            color: #745a45;
+            margin-left: 1rem;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-item-price {
+                margin: 0.4rem 0 0;
+            }
+        }
+    </style>
+
+    <h2>Il Nostro Menù</h2>
+    <div class="menu-divider"></div>
+
+    <!-- SEZIONE VINI ROSSI -->
+    <div class="menu-section">
+        <h3>Vini Rossi</h3>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Amarone della Valpolicella</div>
+                <div class="menu-item-desc">Strutturato, avvolgente, note di ciliegia sotto spirito</div>
+            </div>
+            <div class="menu-item-price">€12</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Barolo DOCG</div>
+                <div class="menu-item-desc">Elegante, tannino fine, sentori di rosa e spezie</div>
+            </div>
+            <div class="menu-item-price">€14</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Chianti Classico Riserva</div>
+                <div class="menu-item-desc">Fruttato, equilibrato, finale persistente</div>
+            </div>
+            <div class="menu-item-price">€8</div>
+        </div>
+    </div>
+
+    <!-- SEZIONE VINI BIANCHI -->
+    <div class="menu-section">
+        <h3>Vini Bianchi</h3>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Pinot Grigio</div>
+                <div class="menu-item-desc">Fresco, sapido, profumi floreali</div>
+            </div>
+            <div class="menu-item-price">€6</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Chardonnay Barricato</div>
+                <div class="menu-item-desc">Morbido, vaniglia, leggera tostatura</div>
+            </div>
+            <div class="menu-item-price">€9</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Gewürztraminer</div>
+                <div class="menu-item-desc">Aromaticità intensa, note di litchi e spezie</div>
+            </div>
+            <div class="menu-item-price">€7</div>
+        </div>
+    </div>
+
+    <!-- SEZIONE BOLLICINE -->
+    <div class="menu-section">
+        <h3>Bollicine</h3>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Prosecco Superiore DOCG</div>
+                <div class="menu-item-desc">Fine, fruttato, piacevole e delicato</div>
+            </div>
+            <div class="menu-item-price">€6</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Franciacorta Brut</div>
+                <div class="menu-item-desc">Elegante, minerale, perlage finissimo</div>
+            </div>
+            <div class="menu-item-price">€12</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Champagne Brut Réserve</div>
+                <div class="menu-item-desc">Equilibrato, agrumi, complesso ed elegante</div>
+            </div>
+            <div class="menu-item-price">€18</div>
+        </div>
+    </div>
+
+    <!-- SEZIONE VINI DOLCI / PASSITI -->
+    <div class="menu-section">
+        <h3>Vini Dolci & Passiti</h3>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Moscato d’Asti DOCG</div>
+                <div class="menu-item-desc">Aromatico, dolce, delicatamente frizzante</div>
+            </div>
+            <div class="menu-item-price">€6</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Recioto della Valpolicella</div>
+                <div class="menu-item-desc">Dolce, fruttato, intenso e vellutato</div>
+            </div>
+            <div class="menu-item-price">€10</div>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Passito di Pantelleria</div>
+                <div class="menu-item-desc">Miele, albicocca, sensazioni mediterranee</div>
+            </div>
+            <div class="menu-item-price">€9</div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer data-aos="fade-up">
+    <p>&copy; 2025 Dal Biondo – Tutti i diritti riservati</p>
+    <p>
+        <a href="tel:+393202467716"> +39 320 246 7716</a> |
+        <a href="mailto:info@dalbiondo.it"> info@dalbiondo.it</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </body>
 </html>
