@@ -319,3 +319,39 @@ window.addEventListener('scroll', () => {
         countersStarted = true;
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // HTML dell'iframe della mappa
+    const mapIframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.802322184937!2d11.9875601!3d42.64435050000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13292db5e4c97387%3A0xd34759aef4d278ae!2sDal%20Biondo%20Wine%20and%20Food!5e0!3m2!1sit!2sit!4v1756929180086!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+
+    const container = document.getElementById("map-container");
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+
+    // Funzione per caricare la mappa
+    function loadMap() {
+        if (container) {
+            container.innerHTML = mapIframe; // sostituisce il placeholder con la mappa
+        }
+    }
+
+    // Controlla se l’utente ha già accettato i cookie
+    if (localStorage.getItem("cookiesAccepted") === "true") {
+        loadMap(); // carica subito la mappa
+        if (banner) banner.classList.add("hidden"); // nasconde banner
+    } else {
+        // Mostra il banner se non c'è consenso
+        if (banner) banner.classList.remove("hidden");
+    }
+
+    // Gestione click sul bottone OK
+    if (acceptBtn) {
+        acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesAccepted", "true");
+            if (banner) banner.classList.add("hidden");
+            loadMap();
+        });
+    }
+
+});

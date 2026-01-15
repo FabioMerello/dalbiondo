@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papTgkAgF6DHQps4jzFqXTmFChFbRpiEuk+xO+Uuk6A3pFP6Y65IG9Bp6PA2XvwFyKxJQfaJTOkB3Vr+VsyYkg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
 <body>
 
+<!-- BANNER COOKIE -->
 <div id="cookie-banner" class="hidden">
     <p>
-        Questo sito utilizza Google Maps che potrebbe installare cookie di terze parti.
-        <a href="/privacy.html" target="_blank" rel="noopener">Scopri di più</a>.
+        Questo sito utilizza servizi di terze parti per contenuti interattivi e performance del sito, tra cui:
+        <strong>Google Maps</strong> per la visualizzazione delle mappe,
+        <strong>Google Fonts</strong> e la libreria <strong>AOS (Animate On Scroll)</strong> per animazioni e grafica,
+        e <strong>Google Search Console</strong> per monitorare le performance e l’indicizzazione delle pagine.
+        Google Maps potrebbe installare cookie di terze parti e raccogliere dati come l’indirizzo IP,
+        mentre Google Fonts, AOS e Search Console non tracciano direttamente gli utenti.
+        <a href="privacy.html" target="_blank" rel="noopener">Scopri di più</a>.
     </p>
     <button id="accept-cookies">OK</button>
 </div>
@@ -292,8 +298,11 @@
             <button type="submit">Invia richiesta</button>
         </form>
 
-        <div class="map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.802322184937!2d11.9875601!3d42.64435050000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13292db5e4c97387%3A0xd34759aef4d278ae!2sDal%20Biondo%20Wine%20and%20Food!5e0!3m2!1sit!2sit!4v1756929180086!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- CONTENITORE MAPPA -->
+        <div class="map-wrapper" id="map-container">
+            <div class="map-placeholder">
+                <p>Accetta i cookie per visualizzare la mappa.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -302,14 +311,14 @@
     <h2>Seguici</h2>
     <div class="social-icons">
         <a href="https://www.instagram.com/dalbiondowinefood/" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABOFBMVEVHcExxF/13F/1zFf2AFv2MCu+iBOmyAuLEAd7SANraBMzwHpedI+XeANfmANHmAr+PF/6fD/vxAL7qArV7GP21FvnRVurnZ+P2Z9roQeDzGtXzB8v7AqvWiPn+7fn////7ftv/A7z0BKH3v/H+3fT+ruj+AJr/9/r/RcD/bMDKFff/Bo3iG+r8GrX/AIH+H5r/yeP+BHj/t9n/V5r+Am7+H37+BGT/ssX/Imz/RXv/ucz+e4z+JFT/XI3/MGL+LUf/u7f/yc7/Alr+OUf+MSz+QzT+R0T+iHD+SRj+VzH+WQX+AkL+c2L/0sT+aCX+cBL/7+j+aQL+eRv/oUX/fwL+iBD/wXz+jgD/3rr/1rn+dgz+nAP9FpT+lw7+qgH+tQD+vQD/w1f9kwf/xAD9PFn9ogj/ywD9uAfgLZLBAAAAaHRSTlMAW9H+////////xEsC///N////zFz/////////////////uP////7///////////7////////////////////////////////////////////////////////F/7VQ///+/87/vsj/uqL0GQwAAAHcSURBVHgBRMlFehwxEEDhV1VS04yZ7U04m+AmcBjfLLscJ4xLHyA0YGqSlJ7P9MT6BRC52EEQuDjlFITx2eWvXJsDQWYIKgJj4VQW5gBJAg75K5vTgZDTFUEu/kUEzqGaiC6DMBbhpqQyoyKTNYD1Hp+Ui6J0ZH1HhXNA0RfzyRIZl5WprroK3BZwwvx0aUGdB87HCIN5VBUVP9i468ZLxWLv+pg6vJmDaSiSW2eyIRNg84/HxfVJmTD3DxFWGmWjrosRpxMNGr3iIqYbG7IGK5lKvZE3jVuTynsDzHRoD3xpxaTQvIKumGBWgCouM9bPKEisJg0VTV4X0aBqQEuXQ2kGlmVmZCtgCoxBJfeAz0b8NQbWI7wOAKCZMgbn9E6tItG1HFTKRQ4jgSYpiiPu6BFJW1fW9J7oDFWWgpf0MH09YnB6yIEYnIJhLhqkpw3aC4OuUJ4QlDzX55/Um5m4Ue6dmXr59LwkBM0xy/ieVNV7zSSTZMU3fs8UNBomr+v3jQx5X1XmB7tdgnNu1JqDl+0nbnp+HpLp+WM5bB0mIMJFc/ouSgjd+U99O1qYONOhFEMonPcZCZ6eGp9eRcSwhWkSRCIxKnfeIMBh1WRcFOhTaENo/096OTA7AACDzKODDThakgAAAABJRU5ErkJggg==" alt="Instagram">
+            <img src="Instagram_Glyph_Gradient.png" alt="Instagram">
 
         </a>
         <a href="https://www.facebook.com/profile.php?id=61574667521864#" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAgVBMVEUAAAAQcP8IZf8IZ/8JZv8HZf8IZv8IZv8IaP8JZ/8HZv8IZv8FZf8YcP9FjP+TvP/g7P/////R4/9Vlf8QYP+Es/9kn/8IZv8nef8JZf8AYP/v9f/Q4v/B2P9GjP8HZv+yz//Q4/83g/8HZv/g6/+Dsv8HZf/n7//////////e6//ZLyHjAAAAK3RSTlMAEGCfz+//XyCQj98w/////////xD//6D/kBD/////7////8///5Cgz+/vONkvXQAAAPJJREFUeAF9kkUCwzAMBGVSGMrM3P//rxBaB+e6s0YREFJpw2y0cgS1cT3DQLmNWPjcwK/XA24RWIuEdg4j7OtHUX0NYedxko5+jCeZMc0En8FsVDDHSd1WDoFdIlogX46awopozWA+ythsd7s9ZxymJBkcs3wcMZC0YHDKhDNbKLowuGYC21zINIWUbQ7EwwJT7YogqgTTKaTY4tIp7HDIRadwwzVlKVyv11HG9cekFBxam8FbTInuQ4LCd3cL2Uzd+4UV/VkHfUIgMLRdQuBi7JsCxh5rQEAfrO9NYSWojruwBOOhDoR8PF+j0fuipNX+AmbCIviMIiwCAAAAAElFTkSuQmCC" alt="Facebook">
+            <img src="Facebook_Logo_Primary.png" alt="Facebook">
         </a>
-        <a href="https://www.leggimenu.it/menu/dalbiondowineandfood" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEVVfIT///9KdX6/y85mh45GcnvZ4OLk6utUfITV3d9CcHlMdn/t8fKzwsZPeIBReYKXrLFvj5WOparK1Nf19/eoub3g5ufo7e74+fpeg4q5x8qZrrLG0dR8mJ5sjZN4lZuiYN+sAAAD2klEQVR4nO2c63qiMBBAJRqFKOAFvFvf/y0Xu9vW7WYSTCjKt+f81ZE5BCYXgqMRAAAAAAAAAAAAAAAAAAAAAAAAAAAA/GcUys6z8+qMYp1bOR6enVlXqHNiZ1I+O7WOUGMMhw6GwwfD4YPh8MFw+GA4fDAcPhgOHwyHD4bDB8Phg+HwwXD4YNiOspgrrc0NrVVRtI9Td3Gq+Imz6jZsDm/h7ydvZaHN2zLfTHeLKqkW22xcX0qjvJZl8+Orr7jZdJMvV1rPu7Z0GqpxZmN8p1iYST39N3oxvhjlyLXRu+Zby2G3+cqotDdDvbN+tNOfeaa1/SsN+/FEC46FWY33UlxS5QcpsHvDmdNQH6TgP2QrY2mOwiztv/vF5k131o7hhvPC4/ee6uj74/LSrBf+uGSTzp9taNYt8mw4mfvDpXrla78PlkZIuR/DUm1aJppkd9Wx1Me2YU0zdlNWwwyLQ5sr7Q+Lw0emxUGsS+7A3g3N6pFEP0cP6vJYWLKftB47dGs4mzyYafLeGHr5aFiTRbxiiOFC7ssEqjId6dOjUQ37UfSFGmIYwNaogBZsmEV3jD0ZJvWDt+4nR+2XeAnD5OEr+4Nr5K3Ym2Ewi8ie//UNk1NcIw7AsIorNgMwTNZRjTgEw21UOR2CYdyqWBeGu+x8PmcBZ6NtYB4zV4w1rPKrNvq2MVybt/qRGUe+ui1q3dba9DV395a7mA4jznCx1qr8rHTl3Kyrdn6zi7mfNipVO78+iqimUYa5+V7l5iprI3j6Hpgq59QxpprGGF5sNc5IW+O/2E8s7zqUxrIo+cE44uWICMM3+4l1ZfpONbIHKvkujukvwg0vQoFLU4+hNKstHRPrZxjm4kE9VWMtln6Vi0GH8FITaugY8afKVfszR+UvxahLeKkJNXRVN+VaMnSNT8RkkmXvhs5JW+mYz2euO6q8SmF1+Kgm0NB9RCP3++7LzUjX9zG8uwg0dN/58oL43v3kTEvjhXPfhp6VhblYTZ0XaRMoVdNN34aeMUYpPrWp3RWjkAI9Z6Z7w5P7xpdLzdU90xMDezf0JDoShzXeScKrGPqGGEaI23sSTeevYug7nmToW/t8GcO9b84tGfrmCC9jWIUaTodi6F1olwx9iWKIIYYYYoghhhhiiCGGGGKIIYYYYoghhhhiiCGGGGKIIYYYYoghhhhiiOErGwrvsfycYSEE+rYaOZjXUyvb2+Y8dbZ/6N3Pquxx06Nvu3YZGuhStP5Rkv79Zqr9X5S0f8OuEOjPU8imq79yAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4cX4BVQVfUTiaX3cAAAAASUVORK5CYII=" alt="Facebook" />
+        <a href="https://www.leggimenu.it/menu/dalbiondowineandfood" target="_blank" rel="noopener" aria-label="leggimenu">
+            <img src="img_1.png" alt="leggimenu_logo" />
         </a>
     </div>
 </section>
@@ -361,7 +370,7 @@
     <p>&copy; 2025 Dal biondo – Tutti i diritti riservati</p>
     <p>
         <a href="tel:+393202467716"> +39 320 246 7716</a> |
-        <a href="mailto:info@almafavignana.it"> info@dalbiondo.it</a>
+        dalbiondowinefood@gmail.com
         <a href="privacy.html">Privacy Policy</a>
     </p>
 </footer>
