@@ -232,41 +232,59 @@
     </div>
 </div>
 
-            <!-- PRODOTTO 4 -->
-            <div class="product-card" data-prezzo="40" data-nome="ARRAN ROBERT BURNS">
-                <img src="https://m.media-amazon.com/images/I/81wZsqzEivL.jpg" alt="Arran Robert Burns">
+         <!-- PRODOTTO 4 -->
+<div class="product-card" data-prezzo="40" data-nome="ARRAN ROBERT BURNS">
+    <img src="https://m.media-amazon.com/images/I/81wZsqzEivL.jpg" alt="Arran Robert Burns">
 
-                <div class="product-content">
-                    <h3>ARRAN ROBERT BURNS</h3>
-                    <p>Single Malt Scotch whisky natural color.</p>
-                    <p class="product-price">€40,00 cad.</p>
+    <div class="product-content">
+        <h3>ARRAN ROBERT BURNS</h3>
 
-                    <button class="product-btn">Richiedi preventivo</button>
+        <p class="product-description">
+            Single Malt scozzese dedicato a Robert Burns, simbolo della tradizione. Naturale nel colore
+            e dal profilo morbido e pulito, offre note fresche di frutta, miele e vaniglia.
+            Un whisky diretto e conviviale, perfetto per la degustazione quotidiana.
+        </p>
 
-                    <div class="product-form-wrapper">
-                        <form class="product-form" action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="TUO_ACCESS_KEY_WEB3FORMS">
-                            <input type="hidden" name="product_name" value="Arran Robert Burns">
+        <p class="product-price">€40,00 cad.</p>
 
-                            <label>Quantità:</label>
-                            <input type="number" name="quantity" min="1" max="500" value="1" class="product-quantity">
+        <button type="button" class="product-btn">Richiedi preventivo</button>
 
-                            <p class="product-total">Totale: €<span>40.00</span></p>
+        <div class="product-form-wrapper">
+            <form class="product-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="TUO_ACCESS_KEY_WEB3FORMS">
+                <input type="hidden" name="product_name" value="Arran Robert Burns">
 
-                            <label>Nome e Cognome:</label>
-                            <input type="text" name="name" required>
+                <label>Quantità:</label>
+                <input
+                    type="number"
+                    name="quantity"
+                    min="1"
+                    max="500"
+                    value="1"
+                    class="product-quantity"
+                >
 
-                            <label>Email:</label>
-                            <input type="email" name="email" required>
+                <p class="product-total">
+                    Totale: €<span>40.00</span>
+                </p>
 
-                            <label>Messaggio (opzionale):</label>
-                            <textarea name="message" rows="3"></textarea>
+                <label>Nome e Cognome:</label>
+                <input type="text" name="name" required>
 
-                            <button type="submit" class="product-submit">Invia richiesta</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Messaggio (opzionale):</label>
+                <textarea name="message" rows="3"></textarea>
+
+                <button type="submit" class="product-submit">
+                    Invia richiesta
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 
 
