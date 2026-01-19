@@ -84,69 +84,62 @@
 
         <div class="product-grid">
 
-            <!-- PRODOTTO 1 -->
-            <div class="product-card" data-prezzo="50" data-nome="ARRAN 10 YEARS">
-                <img src="https://whiskyshop.it/1836-large_default/arran-10-years-old.jpg" alt="Arran 10 years">
+           <!-- PRODOTTO 1 -->
+<div class="product-card" data-prezzo="50" data-nome="ARRAN 10 YEARS">
+    <img src="https://whiskyshop.it/1836-large_default/arran-10-years-old.jpg" alt="Arran 10 years">
 
-                <div class="product-content">
-                    <h3>ARRAN 10 YEARS</h3>
-                    <p>Single Malt Scotch whisky non chill filtered natural color.</p>
-                    <p class="product-price">€50,00 cad.</p>
+    <div class="product-content">
+        <h3>ARRAN 10 YEARS</h3>
 
-                    <button class="product-btn">Richiedi preventivo</button>
+        <p class="product-description">
+            Single Malt scozzese proveniente dall’isola di Arran, maturato 10 anni in botti ex-bourbon.
+            Non filtrato a freddo e senza coloranti, esprime note fresche di frutta, vaniglia e agrumi,
+            con un sorso equilibrato ed elegante. Un grande classico, autentico e versatile.
+        </p>
 
-                    <div class="product-form-wrapper">
-                        <form class="product-form" action="https://api.web3forms.com/submit" method="POST">
+        <p class="product-price">€50,00 cad.</p>
 
-                            <input type="hidden" name="access_key" value="TUO_ACCESS_KEY_WEB3FORMS">
-                            <input type="hidden" name="product_name" value="Arran 10 Years">
+        <button type="button" class="product-btn">Richiedi preventivo</button>
 
-                            <label>Quantità:</label>
-                            <input
-                                    type="number"
-                                    name="quantity"
-                                    min="1"
-                                    max="500"
-                                    value="1"
-                                    class="product-quantity"
-                            >
+        <div class="product-form-wrapper">
+            <form class="product-form" action="https://api.web3forms.com/submit" method="POST">
 
-                            <p class="product-total">
-                                Totale: €<span>50.00</span>
-                            </p>
+                <input type="hidden" name="access_key" value="TUO_ACCESS_KEY_WEB3FORMS">
+                <input type="hidden" name="product_name" value="Arran 10 Years">
+                <input type="hidden" name="total" class="total-input">
 
-                            <label>Nome e Cognome:</label>
-                            <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Inserisci il tuo nome"
-                                    required
-                            >
+                <label for="qty-arran">Quantità:</label>
+                <input
+                        id="qty-arran"
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        max="500"
+                        value="1"
+                        class="product-quantity"
+                >
 
-                            <label>Email:</label>
-                            <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Inserisci la tua email"
-                                    required
-                            >
+                <p class="product-total">
+                    Totale: €<span>50.00</span>
+                </p>
 
-                            <label>Messaggio (opzionale):</label>
-                            <textarea
-                                    name="message"
-                                    rows="3"
-                                    placeholder="Eventuali richieste specifiche..."
-                            ></textarea>
+                <label>Nome e Cognome:</label>
+                <input type="text" name="name" required>
 
-                            <button type="submit" class="product-submit">
-                                Invia richiesta
-                            </button>
+                <label>Email:</label>
+                <input type="email" name="email" required>
 
-                        </form>
-                    </div>
-                </div>
-            </div>
+                <label>Messaggio (opzionale):</label>
+                <textarea name="message" rows="3"></textarea>
 
+                <button type="submit" class="product-submit">
+                    Invia richiesta
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
